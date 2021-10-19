@@ -1,6 +1,11 @@
-if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js')
+let swDirect = '/20213-PWA-U2-P5-JJBM/sw.js';
 
+if (navigator.serviceWorker) {
+    console.log('SW DISPONIBLE');
+    if (url.includes('localhost')) {
+        swDirect = '/sw.js'
+    }
+    navigator.serviceWorker.register(swDirect);
 }
 
 /*
